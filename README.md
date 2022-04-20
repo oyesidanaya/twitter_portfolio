@@ -18,7 +18,7 @@ A simple portfolio Spring Java Web App that displays the profile image, name, so
 * Springdoc: To generate the Api documentation. https://springdoc.org/
 * Mustache: To use Logic-less templates to show in the frontend side. https://github.com/spullara/mustache.java
 
-##Configuration
+## Configuration
 * Create a file called ``application-local.properties`` at the same level at ``application.properties``
 * Add these properties with the appropriate values:\
   PORTFOLIO_DATABASE_URL=jdbc:mysql://{host}:{port}/{database} \
