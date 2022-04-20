@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio Java Web App</title>
+</head>
+<body>
+<h1>Portfolio Java Web App</h1>
+<br>
+<h2> Portfolios List</h2>
+
+<br/><br/>
+<div>
+    <table border="1">
+        <tr>
+            <th width="30px" >Id</th>
+            <th>Name</th>
+            <th>Summary</th>
+            <th>Twitter's User Name</th>
+        </tr>
+        {{#portfolios}}
+        <tr>
+            <td align="center"><a href="/portfolio/detail/{{id}}">{{id}}</a></td>
+            <td><a href="/portfolio/detail/{{id}}">{{title}}</a></td>
+            <td>{{description}}</td>
+            <td>{{twitterUserName}}</td>
+        </tr>
+        {{/portfolios}}
+    </table>
+</div>
+</body>
+</html>

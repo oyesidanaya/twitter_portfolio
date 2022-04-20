@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio Java Web App</title>
+    <style>
+        nav {
+            line-height:30px;
+            background-color:#eeeeee;
+            float:left;
+            padding:5px;
+        }
+        section{
+            width:500px;
+            float:left;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+<h1>Portfolio Java Web App</h1>
+
+<nav>
+    <a href="/">Home</a>
+</nav>
+
+{{#portfolio}}
+<main>
+    <section>
+        <figure>
+            <img src="{{#imageUrl}}{{imageUrl}}{{/imageUrl}}" alt="Profile Image">
+        </figure>
+        <section>
+            <h2>{{title}}'s Timeline</h2>
+            <article>
+                <table>
+                    {{#userTwits}}
+                    <tr>
+                        <td>
+                            <figure>
+                                <img src="{{#imageUrl}}{{imageUrl}}{{/imageUrl}}" width="30" height="30">
+                            </figure>
+                        </td>
+                        <td>{{text}}</td>
+                    </tr>
+                    {{/userTwits}}
+                </table>
+                <a href="https://twitter.com/{{#twitterUserName}}{{twitterUserName}}{{/twitterUserName}}" target="_blank">
+                    Go to Account >
+                </a>
+            </article>
+        </section>
+    </section>
+    <section>
+        <h1>{{title}}</h1>
+        <article>
+            <h2>My work experience</h2>
+            <p>{{description}}</p>
+        </article>
+    </section>
+</main>
+{{/portfolio}}
+</body>
+</html>
